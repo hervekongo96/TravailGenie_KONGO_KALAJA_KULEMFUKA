@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>www.onem.com</title>
+</head>
+<body>
+       <nav>
+            <h5 class="brand">ONEM Service</h5>
+            <ul>
+                <li><a href="/www.onem.com">Accueil</a></li>
+                <li><a href="/login">Se connecter</a></li>
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="card-header">
+                <div >
+                    <h4 class="border border-primary py-3 px-3 text-center text-primary">
+                        CREATION DE COMPTE
+                    </h4>
+                </div>
+            </div>
+            <hr>
+            
+            <hr>
+            <div class="col-md-8 m-auto">
+               <div class="card" >
+                 <div class="card-header">
+                     information
+                 </div>
+                    <div class="card-body">
+                        <form action="/auth/registrer" method="POST">
+                            <div class="form-group">
+                                <label for="nom">Nom</label>
+                                <input type="text" class="form-control" id="name" name="name" >
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Adresse Email</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="passwod">Mot de passe</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordconfirm">Confirmez Mot de passe</label>
+                                <input type="password" class="form-control" id="passwordconfirm" name="passwordconfirm">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enregistrement</button>
+                        </form>
+                    </div>
+            </div>
+            <hr>
+            {{#if message}}
+            <h7 class="alert alert-danger mt-4">{{message}}</h7>
+            {{/if}}
+            </div>
+        </div>
+</body> 
+</html>

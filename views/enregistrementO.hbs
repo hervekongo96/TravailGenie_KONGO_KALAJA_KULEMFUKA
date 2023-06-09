@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/css/bootstrap1.min.css">
+        <title>www.onem.com</title>
+    </head>
+    <body>
+        <nav>  
+            <h5 class="brand">ONEM Service</h5>
+            <ul>
+                <li><a href="/www.onem.com">Accueil</a></li>
+                <li><a href="/loginE">Deconnecter</a></li>
+                <li><a href="/offres">Voir</a></li>
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="card-header">
+                <div >
+                    <h4 class="border border-primary py-3 px-3 text-center text-primary">
+                        PUBLICATION DE L'OFFRE D'UNE ENTREPRISE
+                    </h4>
+                </div>
+            </div>
+            <hr>
+            
+            <hr>
+            <div class="card">
+                <div class="card-header">
+                        Informations sur l'offre
+                </div>
+                    <div class="card-body">
+                        
+                            <form action="/auth/enregistrementO" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="date" id="date" value="" class="form-control" placeholder="Date de publication">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="date_liimite" id="date_liimite" value="" class="form-control" placeholder="Date limite de l'offre">
+                                </div>
+                                <div class="form-group contact-forms">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="Description en detail" required=""></textarea>
+                                    </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-sm btn-success">Publier</button>
+                                </div>
+                            </form>
+                       
+                    </div>
+                    <hr>
+                    {{#if message}}
+                    <h7 class="alert alert-danger mt-4">{{message}}</h7>
+                    {{/if}}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>www.onem.com//Liste</title>
+</head>
+<body>
+        <nav>
+            <h5 class="brand">ONEM Service</h5>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/personas/enregistrement">Ajouter</a></li>
+                <li><a href="/login">Deconnecter</a></li>
+                
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">N°</th>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Postnom</th>
+                                        <th scope="col">Prenom</th>
+                                        <th scope="col">Sexe</th>
+                                        <th scope="col">EtatCivil</th>
+                                        <th scope="col">DateNaissance</th>
+                                        <th scope="col">Age</th>
+                                        <th scope="col">NiveauEtude</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Nationalité</th>
+                                        <th scope="col">Adresse</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Téléphone</th>
+                                        <th scope="col">Option</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                
+                                {{#each demandeur_emploi}}
+                                    <tr>
+                                        <th scope="row">
+                                            {{this.NumeroMatricule}}
+                                        </th>
+                                        <td>{{this.Nom}}</td>
+                                        <td>{{this.Postnom}}</td>
+                                        <td>{{this.Prenom}}</td>
+                                        <td>{{this.Sexe}}</td>
+                                        <td>{{this.Etat_civil}}</td>
+                                        <td>{{this.Date_naissance}}</td>
+                                        <td>{{this.Age}}</td>
+                                        <td>{{this.Niveau_etude}}</td>
+                                        <td>{{this.Description}}</td>
+                                        <td>{{this.Nationalite}}</td>
+                                        <td>{{this.Adresse}}</td>
+                                        <td>{{this.E_mail}}</td>
+                                        <td>{{this.Telephone}}</td>
+                                        <td>
+                                            <a href="/editer/{{this.NumeroMatricule}}" class="btn btn-sm btn-warning">Editer</a>
+                                            <a href="/supprimer/{{this.NumeroMatricule}}" class="btn btn-sm btn-danger">Supprimer</a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    </body>
+</html>

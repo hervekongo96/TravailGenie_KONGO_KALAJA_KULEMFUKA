@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>www.onem.com</title>
+</head>
+<body>
+        <nav>
+            <h5 class="brand">ONEM Service</h5>
+            <ul>
+                <li><a href="/www.onem.com">Accueil</a></li>
+                <li><a href="/enregistrement">S'enregistrer</a></li>
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="card-header">
+                <div >
+                    <h4 class="border border-primary py-3 px-3 text-center text-primary">
+                        IDENTIFICATION
+                    </h4>
+                </div>
+            </div>
+            <hr>
+            <span>
+                    Remplisez les deux champs en utilisant les informations soumissent (votre nom et numéro de téléphone) lors de votre enregistrement s'il vous plait!
+            </span> 
+            <hr>
+            <div class="col-md-8 m-auto">
+               <div class="card" >
+                    <div class="card-header">
+                        OFFRE CONNECTION
+                    </div>
+                    <div class="card-body">
+                        <form action="/auth/verification" method="POST">
+                            
+                            <div class="form-group">
+                                <label for="no">* Nom</label>
+                                <input type="text" class="form-control" id="nom" name="nom">
+                            </div>
+                            <div class="form-group">
+                                <label for="passwod">* Téléphone</label>
+                                <input type="password" class="form-control" id="telephone" name="telephone" placeholder="+243">
+                            </div>
+                          
+                            <button type="submit" class="btn btn-primary">se connecter</button>
+                        </form>
+                        <hr>
+                        {{#if message}}
+							<h5 class="alert alert-danger mt-4">{{message}}</h4>
+						{{/if}}
+                    </div>
+                    <span>si vous n'arriver pas de vous connecter ou pour plus d'informations prière de cliquer sur ce lien pour s'enregistrer======>> <a href="/enregistrement">Enregistrement</a></span>
+                </div>
+            </div>
+        </div>
+    </body> 
+</html>

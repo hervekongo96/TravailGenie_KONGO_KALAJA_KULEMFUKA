@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/css/bootstrap1.min.css">
+        <title>www.onem.com</title>
+    </head>
+    <body>
+        <nav>  
+            <h5 class="brand">ONEM Service</h5>
+            <ul>
+                <li><a href="/www.onem.com">Accueil</a></li>
+                <li><a href="/login">Deconnecter</a></li>
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+
+        <div class="container mt-5">
+            <div class="card-header">
+                <div >
+                    <h4 class="border border-primary py-3 px-3 text-center text-primary">
+                        FORMULAIRE D'ENREGISTREMENT AU SERVICE
+                    </h4>
+                </div>
+            </div>
+            <hr>
+            
+            <hr>
+            <div class="col-md-10 m-auto">
+                <div class="card">
+                 <div class="card-header">
+                        Identité
+                </div>
+                    <div class="card-body">
+                        
+                        <form action="/auth/enregistrement" method="POST">
+                            <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="Nom">Nom</label>
+                                        <input type="text" name="nom" id="nom" value="" class="form-control" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postnom">Postnom</label>
+                                        <input type="text" name="postnom" id="postnom" value="" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="prenom">Prenom</label>
+                                        <input type="text" name="prenom" id="prenom" value="" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sexe">Sexe</label>
+                                        <input type="text" name="sexe" id="sexe" value="" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="etat_civil">Etat Civil</label>
+                                        <input type="text" name="etat_civil" id="etat_civil" value="" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date_naissance">Date de naissance</label>
+                                        <input type="text" name="date_naissance" id="date_naissance" value="" class="form-control">
+                                    </div>
+                                     <div class="form-group">
+                                         <label for="age">Age</label>
+                                        <input type="text" name="age" id="age" value="" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="niveau_etude">Niveau d'étude</label>
+                                        <input type="text" name="niveau_etude" id="niveau_etude" value="" class="form-control" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nationalit">Nationalité</label>
+                                        <input type="text" name="nationalite" id="nationalite" value="" class="form-control" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="adresse">Adresse</label>
+                                        <textarea class="form-control" rows="3" id="description" name="adresse" placeholder="votre adresse actuelle" required=""></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telephone">Numero Téléphonique</label>
+                                        <input type="text" name="telephone" id="telephone" value="" class="form-control" placeholder="+243" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" name="email" id="email" value="" class="form-control">
+                                    </div>
+                                    <div class="form-group contact-forms">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" rows="5" id="description" name="description" placeholder="veuillez ecrire votre parcours en 300 mots" required=""></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-sm btn-success">Envoyer</button>
+                                    </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

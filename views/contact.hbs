@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/css/bootstrap1.min.css">
+        <title>www.onem.com</title>
+    </head>
+    <body>
+        <nav>  
+            <h5 class="brand">ONEM Service</h5>
+            <ul>
+                <li><a href="/www.onem.com">Accueil<a></li>
+                <li><a href="/login">Deconnecter</a></li>
+                <li><a href="/offres">Voir</a></li>
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+
+        <hr>
+            <div class="col-md-8 m-auto">
+                    <hr>
+                    <h2 class="border border-primary py-3 px-3 text-center text-primary">
+                        MERCI POUR VOTRE CHOIX 
+                    </h2>
+                     <hr>            
+            </div>
+        <hr>
+
+        <div class="container mt-5">
+            <div class="col-md-8 m-auto">
+                <div class="card">
+                    <div class="card-header">
+                            Envoi
+                    </div>
+                    <hr>
+                        {{#if message}}
+                            <h7 class="alert alert-danger mt-4">{{message}}</h7>
+                        {{/if}}
+                    <div class="card-body">
+                        {{#each offre}}
+                            <form action="/auth/choix" method="POST">
+                                <div class="form-group">
+                                    <label for="profil">*PROFIL DE L'OFFRE</label>
+                                    <input type="text" name="profil" id="nom" value="{{this.Description}}" class="form-control" placeholder="Profil">
+                                </div>
+                                <div class="form-group">
+                                    <label for="numero">*NUMERO DE L'OFFRE</label>
+                                    <input type="text" name="numero" id="nom" value="{{this.Numero}}" class="form-control" placeholder="numéro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">*E-MAIL</label>
+                                    <input type="email" name="email" id="email" value="" class="form-control" placeholder="E-mail">
+                                </div>
+                                <div class="form-group contact-forms">
+                                    <label for="identite">*IDENTITES</label>
+                                    <input type="text" name="identites" id="identites" value="" class="form-control" placeholder="Identité complète">    
+                                </div>
+                                <div class="form-group">
+                                        <button type="submit" class="btn btn-sm btn-success">Envoyer</button>
+                                </div>
+                            </form>
+                        {{/each}}
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

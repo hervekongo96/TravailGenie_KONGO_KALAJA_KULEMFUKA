@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>www.onem.com</title>
+</head>
+<body>
+        <nav>
+            <h5 class="brand">ONEM Service</h5>
+            <ul>
+                <li><a href="/www.onem.com">Accueil</a></li>
+                <li><a href="/login">Deconnecter</a></li>
+                
+            </ul>
+            <div style="clear: both"></div>
+        </nav>
+        
+        <div class="container mt-5">
+            <div class="col-md-12 m-auto">
+                <div class="card-header">
+                    <div >
+                        <h4 class="border border-primary py-3 px-3 text-center text-primary">
+                            LISTE DES OFFRES DISPONIBLE
+                        </h4>
+                    </div>
+                </div>
+                <hr>veuillez cliquer à l'offre qui vous convient s'il vous plait!<hr>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Numero</th>
+                                <th scope="col">Date omise</th>
+                                <th scope="col">Date limite</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each offre}}
+                                <tr>
+                                    <th scope="row">{{this.Numero}}</th>
+                                    <td>{{this.Date}}</td>
+                                    <td>{{this.Date_liimite}}</td>
+                                    <td>{{this.Description}}</td>
+                                    <td>
+                                        <a href="/modification/{{this.Numero}}" class="btn btn-sm btn-warning">Choisir</a>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                
+            </div>
+        </div>
+    </body>
+</html>
